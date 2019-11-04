@@ -1,15 +1,15 @@
+/*
 using System;
 using System.Collections.Generic;
 using System.IO;
-using Eto.Forms;
-using Eto.Drawing;
+using System.Windows.Forms;
 using System.Diagnostics;
 using System.Reflection;
 using PartialityLauncher.Properties;
 using System.Net;
 
 namespace PartialityLauncher {
-    public partial class MainForm: Form {
+    public partial class MainForm: Formuuu {
 
         public static Image gameWallpaper;
         public static StackLayout modList;
@@ -22,10 +22,10 @@ namespace PartialityLauncher {
         public Label gameNameLabel;
         public MaskedTextBox appidBox;
 
-        public const string HEADERURL = "https://steamcdn-a.opskins.media/steam/apps/{0}/header.jpg";
+        public const string HEADERURL = "http://cdn.akamai.steamstatic.com/steam/apps/{0}/header.jpg";
 
         public MainForm(string[] args) {
-            Title = "Partiality Launcher";
+            Title = "PartialityLauncher Launcher";
             ClientSize = new Size( 500, 700 );
             this.Resizable = false;
 
@@ -84,7 +84,7 @@ namespace PartialityLauncher {
                                 Items = {
                                     new Button { Text = "Refresh Mod List", Command = refreshMenuCommand},
                                     new Button { Text = "Clear Mod Metadata", Command = clearMetaCommand },
-                                    new Button { Text = "Uninstall Partiality", Command = uninstallCommand}
+                                    new Button { Text = "Uninstall PartialityLauncher", Command = uninstallCommand}
                                 }
                             }
                         }
@@ -100,8 +100,8 @@ namespace PartialityLauncher {
                 {
 					// File submenu
 					new ButtonMenuItem { Text = "&File", Items = { openCommand } },
-					//new ButtonMenuItem { Text = "&Edit", Items = { /* commands/items */ } },
-					// new ButtonMenuItem { Text = "&View", Items = { /* commands/items */ } },
+					//new ButtonMenuItem { Text = "&Edit", Items = {  } },
+					// new ButtonMenuItem { Text = "&View", Items = { } },
 				},
                 ApplicationItems =
                 {
@@ -241,3 +241,4 @@ namespace PartialityLauncher {
         }
     }
 }
+*/

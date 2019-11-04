@@ -20,8 +20,9 @@ namespace PartialityLauncher {
             string executableDirectory = Directory.GetParent( executablePath ).FullName;
             string aboveDirectory = Directory.GetParent( executableDirectory ).FullName;
 
-            string filePath = aboveDirectory + "\\LOG.txt";
-            File.WriteAllText( filePath, sb.ToString() );
+			//string filePath = aboveDirectory + "//LOG.txt";
+			string filePath = executableDirectory + "//LOG.txt";
+			File.WriteAllText( filePath, sb.ToString() );
         }
     }
 }
