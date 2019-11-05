@@ -24,6 +24,8 @@ namespace PartialityLauncher
 			GameManager.OnAppNameLoaded += GameManager_OnAppNameLoaded;
 			GameManager.OnGameLoaded += GameManager_OnGameLoaded;
 
+			SetEnabledControlButtons(false);
+
 			GameManager.LoadLastGame();
 		}
 
@@ -113,8 +115,10 @@ namespace PartialityLauncher
 			btn_refresh.Enabled = enabled;
 			btn_clear_metadata.Enabled = enabled;
 			btn_uninstall.Enabled = enabled;
+			btn_open_game_folder.Enabled = enabled;
 
-			btn_apply_mods.Enabled = true;
+			btn_apply_mods.Enabled = enabled;
+			btn_run_game.Enabled = enabled;
 		}
 
 		public void SetGameName(string name)

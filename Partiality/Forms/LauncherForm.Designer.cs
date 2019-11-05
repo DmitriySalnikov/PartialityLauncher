@@ -38,6 +38,9 @@
 			this.btn_uninstall = new System.Windows.Forms.Button();
 			this.btn_apply_mods = new System.Windows.Forms.Button();
 			this.modList = new System.Windows.Forms.DataGridView();
+			this.Type = new System.Windows.Forms.DataGridViewImageColumn();
+			this.Active = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+			this.ModName = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
 			this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.openGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,9 +52,6 @@
 			this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
 			this.btn_open_game_folder = new System.Windows.Forms.Button();
 			this.btn_run_game = new System.Windows.Forms.Button();
-			this.Type = new System.Windows.Forms.DataGridViewImageColumn();
-			this.Active = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-			this.ModName = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			((System.ComponentModel.ISupportInitialize)(this.pb_game_header)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.modList)).BeginInit();
 			this.menuStrip1.SuspendLayout();
@@ -93,7 +93,6 @@
 			// 
 			this.btn_refresh.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-			this.btn_refresh.Enabled = false;
 			this.btn_refresh.Location = new System.Drawing.Point(12, 245);
 			this.btn_refresh.Name = "btn_refresh";
 			this.btn_refresh.Size = new System.Drawing.Size(142, 23);
@@ -105,7 +104,6 @@
 			// btn_clear_metadata
 			// 
 			this.btn_clear_metadata.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.btn_clear_metadata.Enabled = false;
 			this.btn_clear_metadata.Location = new System.Drawing.Point(160, 245);
 			this.btn_clear_metadata.Name = "btn_clear_metadata";
 			this.btn_clear_metadata.Size = new System.Drawing.Size(92, 23);
@@ -117,7 +115,6 @@
 			// btn_uninstall
 			// 
 			this.btn_uninstall.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-			this.btn_uninstall.Enabled = false;
 			this.btn_uninstall.Location = new System.Drawing.Point(258, 245);
 			this.btn_uninstall.Name = "btn_uninstall";
 			this.btn_uninstall.Size = new System.Drawing.Size(101, 23);
@@ -159,6 +156,34 @@
 			this.modList.Size = new System.Drawing.Size(347, 322);
 			this.modList.TabIndex = 8;
 			this.modList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.modList_CellContentClick);
+			// 
+			// Type
+			// 
+			this.Type.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+			this.Type.FillWeight = 0.1F;
+			this.Type.HeaderText = "Type";
+			this.Type.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+			this.Type.Name = "Type";
+			this.Type.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+			this.Type.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+			this.Type.Width = 56;
+			// 
+			// Active
+			// 
+			this.Active.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+			this.Active.FillWeight = 0.1F;
+			this.Active.HeaderText = "Is Active";
+			this.Active.Name = "Active";
+			this.Active.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+			this.Active.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+			this.Active.Width = 73;
+			// 
+			// ModName
+			// 
+			this.ModName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+			this.ModName.HeaderText = "Mod Name";
+			this.ModName.Name = "ModName";
+			this.ModName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
 			// 
 			// menuStrip1
 			// 
@@ -248,34 +273,6 @@
 			this.btn_run_game.Text = "Run Game";
 			this.btn_run_game.UseVisualStyleBackColor = true;
 			this.btn_run_game.Click += new System.EventHandler(this.btn_run_game_Click);
-			// 
-			// Type
-			// 
-			this.Type.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-			this.Type.FillWeight = 0.1F;
-			this.Type.HeaderText = "Type";
-			this.Type.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-			this.Type.Name = "Type";
-			this.Type.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-			this.Type.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-			this.Type.Width = 56;
-			// 
-			// Active
-			// 
-			this.Active.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-			this.Active.FillWeight = 0.1F;
-			this.Active.HeaderText = "Is Active";
-			this.Active.Name = "Active";
-			this.Active.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-			this.Active.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-			this.Active.Width = 73;
-			// 
-			// ModName
-			// 
-			this.ModName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-			this.ModName.HeaderText = "Mod Name";
-			this.ModName.Name = "ModName";
-			this.ModName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
 			// 
 			// LauncherForm
 			// 
