@@ -147,7 +147,7 @@ namespace PartialityLauncher
 			string hashesFolder = Path.Combine(gameDirectory, "PartialityHashes");
 
 			string[] modFiles = new string[] { };
-			string[] hashesFiles = new string[]{ };
+			string[] hashesFiles = new string[] { };
 
 			if (Directory.Exists(modFolder))
 				modFiles = Directory.GetFiles(modFolder);
@@ -292,7 +292,7 @@ namespace PartialityLauncher
 		public static ModIncompatibilityWarning CheckForModIncompatibilities(ModMetadata checkMod)
 		{
 			ModIncompatibilityWarning warning = new ModIncompatibilityWarning();
-			
+
 			StringBuilder warningBuilder = new StringBuilder();
 			StringBuilder incompatibleBuilder = new StringBuilder();
 

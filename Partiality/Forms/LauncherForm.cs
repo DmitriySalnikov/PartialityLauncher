@@ -186,6 +186,7 @@ namespace PartialityLauncher
 			{
 				GameManager.Uninstall();
 				MessageBox.Show("Uninstalling completed!");
+				FillOutMods();
 			}
 			catch (Exception ex)
 			{
