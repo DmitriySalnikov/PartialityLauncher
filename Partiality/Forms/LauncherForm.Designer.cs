@@ -29,6 +29,7 @@
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.pb_game_header = new System.Windows.Forms.PictureBox();
 			this.l_game_name = new System.Windows.Forms.Label();
 			this.tb_appid = new System.Windows.Forms.TextBox();
@@ -38,9 +39,6 @@
 			this.btn_uninstall = new System.Windows.Forms.Button();
 			this.btn_apply_mods = new System.Windows.Forms.Button();
 			this.modList = new System.Windows.Forms.DataGridView();
-			this.Type = new System.Windows.Forms.DataGridViewImageColumn();
-			this.Active = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-			this.ModName = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
 			this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.openGameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,6 +50,9 @@
 			this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
 			this.btn_open_game_folder = new System.Windows.Forms.Button();
 			this.btn_run_game = new System.Windows.Forms.Button();
+			this.Type = new System.Windows.Forms.DataGridViewImageColumn();
+			this.Active = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+			this.ModName = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			((System.ComponentModel.ISupportInitialize)(this.pb_game_header)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.modList)).BeginInit();
 			this.menuStrip1.SuspendLayout();
@@ -143,6 +144,13 @@
 			this.modList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+			dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+			dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+			dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+			dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			this.modList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
 			this.modList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.modList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Type,
@@ -156,34 +164,6 @@
 			this.modList.Size = new System.Drawing.Size(347, 322);
 			this.modList.TabIndex = 8;
 			this.modList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.modList_CellContentClick);
-			// 
-			// Type
-			// 
-			this.Type.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-			this.Type.FillWeight = 0.1F;
-			this.Type.HeaderText = "Type";
-			this.Type.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
-			this.Type.Name = "Type";
-			this.Type.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-			this.Type.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-			this.Type.Width = 56;
-			// 
-			// Active
-			// 
-			this.Active.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-			this.Active.FillWeight = 0.1F;
-			this.Active.HeaderText = "Is Active";
-			this.Active.Name = "Active";
-			this.Active.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-			this.Active.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-			this.Active.Width = 73;
-			// 
-			// ModName
-			// 
-			this.ModName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-			this.ModName.HeaderText = "Mod Name";
-			this.ModName.Name = "ModName";
-			this.ModName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
 			// 
 			// menuStrip1
 			// 
@@ -273,6 +253,32 @@
 			this.btn_run_game.Text = "Run Game";
 			this.btn_run_game.UseVisualStyleBackColor = true;
 			this.btn_run_game.Click += new System.EventHandler(this.btn_run_game_Click);
+			// 
+			// Type
+			// 
+			this.Type.FillWeight = 0.1F;
+			this.Type.HeaderText = "Type";
+			this.Type.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Zoom;
+			this.Type.Name = "Type";
+			this.Type.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+			this.Type.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+			this.Type.Width = 38;
+			// 
+			// Active
+			// 
+			this.Active.FillWeight = 0.1F;
+			this.Active.HeaderText = "Is Active";
+			this.Active.Name = "Active";
+			this.Active.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+			this.Active.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+			this.Active.Width = 54;
+			// 
+			// ModName
+			// 
+			this.ModName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+			this.ModName.HeaderText = "Mod Name";
+			this.ModName.Name = "ModName";
+			this.ModName.Resizable = System.Windows.Forms.DataGridViewTriState.True;
 			// 
 			// LauncherForm
 			// 
